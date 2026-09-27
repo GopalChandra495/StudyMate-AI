@@ -1,0 +1,347 @@
+.study-plan-page {
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 28px 20px 48px;
+  color: #1f2937;
+}
+
+.study-plan-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.study-plan-header-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: #eef2ff;
+  font-size: 23px;
+}
+
+.study-plan-header h2 {
+  margin: 0 0 7px;
+  color: #111827;
+  font-size: 28px;
+}
+
+.study-plan-header p {
+  max-width: 620px;
+  margin: 0;
+  color: #6b7280;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.study-plan-form-card,
+.study-plan-empty {
+  padding: 24px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 5px 22px rgba(15, 23, 42, 0.05);
+}
+
+.study-plan-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 22px;
+}
+
+.study-plan-field > label {
+  color: #374151;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.study-plan-hint {
+  margin: -4px 0 8px;
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.study-plan-topic-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.study-plan-topic-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 42px;
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 9px;
+  background: #fafafa;
+  color: #374151;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.study-plan-topic-option input {
+  accent-color: #4f46e5;
+}
+
+.study-plan-selected-count {
+  margin-top: 10px;
+  color: #6366f1;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.study-plan-fields-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.study-plan-field input,
+.study-plan-field select {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 9px;
+  background: #fff;
+  color: #111827;
+  font: inherit;
+  font-size: 14px;
+  outline: none;
+}
+
+.study-plan-field input:focus,
+.study-plan-field select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.13);
+}
+
+.study-plan-date-field {
+  grid-column: 1 / -1;
+  max-width: 50%;
+}
+
+.study-plan-error {
+  margin-bottom: 16px;
+  padding: 11px 13px;
+  border: 1px solid #fecaca;
+  border-radius: 9px;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 14px;
+}
+
+.study-plan-submit {
+  min-height: 45px;
+  padding: 11px 20px;
+  border: 0;
+  border-radius: 10px;
+  background: #4f46e5;
+  color: white;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.study-plan-submit:hover:not(:disabled) {
+  background: #4338ca;
+}
+
+.study-plan-submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.study-plan-loading {
+  margin-top: 20px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.study-plan-results {
+  margin-top: 28px;
+}
+
+.study-plan-results-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding: 22px;
+  border: 1px solid #e0e7ff;
+  border-radius: 14px;
+  background: #f8faff;
+}
+
+.study-plan-eyebrow {
+  color: #6366f1;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.09em;
+}
+
+.study-plan-results-heading h3 {
+  margin: 7px 0 5px;
+  color: #111827;
+  font-size: 21px;
+}
+
+.study-plan-results-heading p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.study-plan-result-badge {
+  flex: 0 0 auto;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #4338ca;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.study-plan-day-card {
+  margin-bottom: 16px;
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 13px;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+}
+
+.study-plan-day-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.study-plan-day-number {
+  color: #4f46e5;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.study-plan-day-date {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.study-plan-day-card h4 {
+  margin: 0 0 16px;
+  color: #111827;
+  font-size: 17px;
+}
+
+.study-plan-sessions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.study-plan-session {
+  padding: 13px 14px;
+  border: 1px solid #eef0f4;
+  border-radius: 9px;
+  background: #fafafa;
+}
+
+.study-plan-session-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: #374151;
+  font-size: 14px;
+}
+
+.study-plan-session-top span {
+  flex: 0 0 auto;
+  color: #6366f1;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.study-plan-session p {
+  margin: 7px 0 0;
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.study-plan-goal {
+  margin-top: 14px;
+  padding: 11px 13px;
+  border-left: 3px solid #16a34a;
+  border-radius: 0 7px 7px 0;
+  background: #f0fdf4;
+  color: #166534;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.study-plan-note {
+  margin-top: 18px;
+  color: #6b7280;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.study-plan-empty h3 {
+  margin-top: 0;
+  color: #111827;
+}
+
+.study-plan-empty p {
+  margin-bottom: 0;
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .study-plan-page {
+    padding: 20px 14px 36px;
+  }
+
+  .study-plan-header h2 {
+    font-size: 24px;
+  }
+
+  .study-plan-form-card,
+  .study-plan-empty {
+    padding: 18px;
+  }
+
+  .study-plan-topic-list,
+  .study-plan-fields-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .study-plan-date-field {
+    grid-column: auto;
+    max-width: none;
+  }
+
+  .study-plan-results-heading {
+    flex-direction: column;
+  }
+
+  .study-plan-submit {
+    width: 100%;
+  }
+}
