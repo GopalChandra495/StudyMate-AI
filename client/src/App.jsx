@@ -14,10 +14,9 @@ import Dashboard from "./pages/Dashboard";
 import AITutor from "./pages/AITutor";
 import StudyPlan from "./pages/StudyPlan";
 
-const API_URL = "https://studymate-ai-4x2n.onrender.com";
+const API_URL = "http://localhost:5000";
 
-// ==================== LOGIN PAGE ====================
-
+// LOGIN PAGE
 function LoginPage({
   email,
   password,
@@ -27,53 +26,49 @@ function LoginPage({
   onSubmit,
 }) {
   return (
-    <main>
-      <h2>Login</h2>
+    <div className="auth-page">
+      <main className="auth-card">
+        <h2>Login</h2>
 
-      <form onSubmit={onSubmit}>
-        <div>
-          <label htmlFor="email">Email</label>
-          <br />
-          <input
-            id="email"
-            type="email"
-            placeholder="Enter email"
-            value={email}
-            onChange={(e) => onEmailChange(e.target.value)}
-            required
-          />
-        </div>
+        <form onSubmit={onSubmit}>
+          <div className="auth-field">
+            <label htmlFor="email">Email</label>
+            <input
+              id="email"
+              type="email"
+              placeholder="Enter email"
+              value={email}
+              onChange={(e) => onEmailChange(e.target.value)}
+              required
+            />
+          </div>
 
-        <br />
+          <div className="auth-field">
+            <label htmlFor="password">Password</label>
+            <input
+              id="password"
+              type="password"
+              placeholder="Enter password"
+              value={password}
+              onChange={(e) => onPasswordChange(e.target.value)}
+              required
+            />
+          </div>
 
-        <div>
-          <label htmlFor="password">Password</label>
-          <br />
-          <input
-            id="password"
-            type="password"
-            placeholder="Enter password"
-            value={password}
-            onChange={(e) => onPasswordChange(e.target.value)}
-            required
-          />
-        </div>
+          <button type="submit">Login</button>
+        </form>
 
-        <br />
-        <button type="submit">Login</button>
-      </form>
+        <p>
+          New user? <Link to="/register">Create an account</Link>
+        </p>
 
-      <p>
-        New user? <Link to="/register">Create an account</Link>
-      </p>
-
-      {message && <p>{message}</p>}
-    </main>
+        {message && <p className="auth-message">{message}</p>}
+      </main>
+    </div>
   );
 }
 
-// ==================== REGISTER PAGE ====================
-
+// REGISTER PAGE
 function RegisterPage({
   name,
   email,
@@ -85,67 +80,60 @@ function RegisterPage({
   onSubmit,
 }) {
   return (
-    <main>
-      <h2>Create Account</h2>
+    <div className="auth-page">
+      <main className="auth-card">
+        <h2>Create Account</h2>
 
-      <form onSubmit={onSubmit}>
-        <div>
-          <label htmlFor="registerName">Name</label>
-          <br />
-          <input
-            id="registerName"
-            type="text"
-            placeholder="Enter your name"
-            value={name}
-            onChange={(e) => onNameChange(e.target.value)}
-            required
-          />
-        </div>
+        <form onSubmit={onSubmit}>
+          <div className="auth-field">
+            <label htmlFor="registerName">Name</label>
+            <input
+              id="registerName"
+              type="text"
+              placeholder="Enter your name"
+              value={name}
+              onChange={(e) => onNameChange(e.target.value)}
+              required
+            />
+          </div>
 
-        <br />
+          <div className="auth-field">
+            <label htmlFor="registerEmail">Email</label>
+            <input
+              id="registerEmail"
+              type="email"
+              placeholder="Enter email"
+              value={email}
+              onChange={(e) => onEmailChange(e.target.value)}
+              required
+            />
+          </div>
 
-        <div>
-          <label htmlFor="registerEmail">Email</label>
-          <br />
-          <input
-            id="registerEmail"
-            type="email"
-            placeholder="Enter email"
-            value={email}
-            onChange={(e) => onEmailChange(e.target.value)}
-            required
-          />
-        </div>
+          <div className="auth-field">
+            <label htmlFor="registerPassword">Password</label>
+            <input
+              id="registerPassword"
+              type="password"
+              placeholder="Create password (minimum 6 characters)"
+              value={password}
+              onChange={(e) => onPasswordChange(e.target.value)}
+              minLength={6}
+              required
+            />
+          </div>
 
-        <br />
+          <button type="submit">Register</button>
+        </form>
 
-        <div>
-          <label htmlFor="registerPassword">Password</label>
-          <br />
-          <input
-            id="registerPassword"
-            type="password"
-            placeholder="Create password (minimum 6 characters)"
-            value={password}
-            onChange={(e) => onPasswordChange(e.target.value)}
-            minLength={6}
-            required
-          />
-        </div>
+        {message && <p className="auth-message">{message}</p>}
 
-        <br />
-        <button type="submit">Register</button>
-      </form>
-
-      {message && <p>{message}</p>}
-
-      <p>
-        Already have an account? <Link to="/login">Login</Link>
-      </p>
-    </main>
+        <p>
+          Already have an account? <Link to="/login">Login</Link>
+        </p>
+      </main>
+    </div>
   );
 }
-
 // ==================== SUBJECTS PAGE ====================
 
 function SubjectsPage({
