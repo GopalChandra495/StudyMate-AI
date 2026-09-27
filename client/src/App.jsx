@@ -14,7 +14,7 @@ import Dashboard from "./pages/Dashboard";
 import AITutor from "./pages/AITutor";
 import StudyPlan from "./pages/StudyPlan";
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://studymate-ai-4x2n.onrender.com";
 
 // ==================== LOGIN PAGE ====================
 
